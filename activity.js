@@ -3,7 +3,7 @@ const { MessageEmbed } = require(`discord.js`);
 const systemmanager = require(`${process.cwd()}/handlers/systemmanager`); //your handle system
 const { ickhandle, errorlogs } = require(`${process.cwd()}/handlers/ickfunctions`); //your handle system
 
-const fetch = require('node-fetch') //for webhook
+const fetch = require('node-fetch') //for activity
 
 /** 
    * @param {Client} client 
@@ -75,7 +75,7 @@ module.exports = {
 
       }
 
-      //send error log with webhook
+      //fetch activity
       fetch(`https://discord.com/api/v8/channels/${message.member.voice.channel.id}/invites`, {
         method: "POST",
         body: JSON.stringify({
