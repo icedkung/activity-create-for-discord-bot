@@ -15,14 +15,10 @@ module.exports = {
   name: `activity-open`,
   category: `add-on`,
   description: `create activity-together`,
-  usage: `activity-open`,
-  playerrequire: {
-    "type": "functional",
-    "nowplaying": false
-  },
   options: [
     {
-      "StringChoices": {
+      "Choices": {
+        type: "str",
         name: "activity", description: "What activity do you want open?", required: true,
         choices: [
           ["Awkword", "awkword"],
